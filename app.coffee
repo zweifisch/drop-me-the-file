@@ -3,7 +3,6 @@ fs = require 'fs'
 connect = require 'connect'
 
 clientSideJS = ->
-	el = document.getElementById 'drop'
 
 	upload = ({files,url,onProgress,onComplete})->
 		xhr = new XMLHttpRequest
@@ -20,10 +19,6 @@ clientSideJS = ->
 			if onProgress
 				xhr.upload.addEventListener "progress", (e)->
 					onProgress e.loaded, e.total
-					
-			# if onComplete
-			# 	xhr.upload.addEventListener "load", (e)->
-			# 		console.debug e
 			
 			if onComplete
 				xhr.onload = ->
@@ -31,6 +26,8 @@ clientSideJS = ->
 					onComplete @status, response
 					
 			xhr.send formData
+
+	el = document.getElementById 'drop'
 
 	el.addEventListener 'dragover', (e)->
 		e.stopPropagation()
@@ -60,7 +57,8 @@ html = """
 		#drop{
 			width:200px;
 			height:200px;
-			border:2px dotted #333;
+			border:3px dotted #333;
+			border-radius: 100px;
 			text-align: center;
 			line-height: 200px;
 		}

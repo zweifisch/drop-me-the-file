@@ -12,7 +12,6 @@
   clientSideJS = function() {
     var el, upload;
 
-    el = document.getElementById('drop');
     upload = function(_arg) {
       var file, files, formData, idx, onComplete, onProgress, url, xhr, _i, _len;
 
@@ -45,6 +44,7 @@
         return xhr.send(formData);
       }
     };
+    el = document.getElementById('drop');
     el.addEventListener('dragover', function(e) {
       e.stopPropagation();
       return e.preventDefault();
@@ -72,7 +72,7 @@
     });
   };
 
-  html = "<!DOCTYPE HTML>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>Drop me the file</title>\n	<style type=\"text/css\">\n		#drop{\n			width:200px;\n			height:200px;\n			border:2px dotted #333;\n			text-align: center;\n			line-height: 200px;\n		}\n	</style>\n</head>\n<body>\n	<div id=\"drop\">\n		Drop me the file\n	</div>\n	<script type=\"text/javascript\">\n		(" + clientSideJS + ")()\n	</script>\n</body>\n</html>";
+  html = "<!DOCTYPE HTML>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>Drop me the file</title>\n	<style type=\"text/css\">\n		#drop{\n			width:200px;\n			height:200px;\n			border:3px dotted #333;\n			border-radius: 100px;\n			text-align: center;\n			line-height: 200px;\n		}\n	</style>\n</head>\n<body>\n	<div id=\"drop\">\n		Drop me the file\n	</div>\n	<script type=\"text/javascript\">\n		(" + clientSideJS + ")()\n	</script>\n</body>\n</html>";
 
   handler = function(req, res) {
     var file, numFiles, numUploadedFiles, rs, ws, _, _ref, _results;

@@ -1,6 +1,6 @@
 {
   "name": "drop-me-the-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "utils allowing others to send you files",
   "main": "app.js",
   "bin": {
