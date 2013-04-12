@@ -1,0 +1,26 @@
+{
+  "name": "drop-me-the-file",
+  "version": "0.0.1",
+  "description": "utils allowing others to send you files",
+  "main": "app.js",
+  "bin": {
+    "drop-me-the-file": "./bootstrap.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zweifisch/drop-me-the-file.git"
+  },
+  "keywords": [
+    "upload",
+    "utils",
+    "cli"
+  ],
+  "author": "zf",
+  "license": "BSD",
+  "dependencies": {
+    "connect": "~2.7.4"
+  }
+}
