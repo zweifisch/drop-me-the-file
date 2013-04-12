@@ -1,6 +1,16 @@
 
-npm install -g drop-me-the-file
+## install
 
 ```sh
-drop-me-the-file -h
+npm install -g drop-me-the-file
+```
+
+## usage
+
+```sh
+drop-me-the-file
+```
+
+```sh
+PORT=8000 drop-me-the-file
 ```
